@@ -44,11 +44,14 @@ class TestFortrainingLib(unittest.TestCase):
         self.assertIsNone(fortraininglib.get_pdf_name('NotExisting', 'en'))
 
     def test_list_page_templates(self):
-
-        list =fortraininglib.list_page_templates("Prayer")
-        self.assertEqual(fortraininglib.list_page_templates("Prayer"),list)
-        list1=fortraininglib.list_page_templates("templates")
-        self.assertEqual(fortraininglib.list_page_templates("templates"),list1)
+        l = ["Baptism", "Prayer", " Forgiving Step by Step", "Repenting", "Time with God"
+             , "Church", "Healing", " My Story with God", "Bible Reading Hints",
+             "The Three_Thieds Process", "Training Meeting Outline", "A Daily Prayer"]
+        for x in l:
+            list = fortraininglib.list_page_templates(x)
+            self.assertEqual(fortraininglib.list_page_templates(x), list)
+        list1 = fortraininglib.list_page_templates("templates")
+        self.assertEqual(fortraininglib.list_page_templates("templates"), list1)
 
 
 if __name__ == '__main__':
