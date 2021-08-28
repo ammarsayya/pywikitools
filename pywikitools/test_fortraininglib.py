@@ -44,6 +44,7 @@ class TestFortrainingLib(unittest.TestCase):
         self.assertIsNone(fortraininglib.get_pdf_name('NotExisting', 'en'))
 
     def test_list_page_templates(self):
+        #list and list 1 are temp lists
         list =fortraininglib.list_page_templates("Prayer")
         self.assertEqual(fortraininglib.list_page_templates("Prayer"),list)
         list1=fortraininglib.list_page_templates("templates")
