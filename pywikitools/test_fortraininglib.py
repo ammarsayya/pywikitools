@@ -43,6 +43,12 @@ class TestFortrainingLib(unittest.TestCase):
         self.assertEqual(fortraininglib.get_pdf_name('Forgiving_Step_by_Step', 'de'), 'Schritte_der_Vergebung.pdf')
         self.assertIsNone(fortraininglib.get_pdf_name('NotExisting', 'en'))
 
+    def test_list_page_templates(self):
+        list =fortraininglib.list_page_templates("Prayer")
+        self.assertEqual(fortraininglib.list_page_templates("Prayer"),list)
+        list1=fortraininglib.list_page_templates("templates")
+        self.assertEqual(fortraininglib.list_page_templates("templates"),list1)
+
 
 if __name__ == '__main__':
     unittest.main()

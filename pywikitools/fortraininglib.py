@@ -425,7 +425,7 @@ def mark_for_translation(title: str, user_name: str, password: str):
     except KeyError as error:
         logger.warning(f"mark_for_translation failed: KeyError, no key named {error}")
 
-
+#print(list_page_templates("Prayer"))
 # Other possibly relevant API calls:
 # https://www.4training.net/mediawiki/api.php?action=query&meta=messagetranslations&mttitle=Translations:Church/44
 # Is equivalent to https://www.4training.net/Special:Translations?message=Church%2F44&namespace=1198
